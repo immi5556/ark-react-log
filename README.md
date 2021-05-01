@@ -1,26 +1,28 @@
-# ark-react-log
+# ark-react-config
 
-> simple react library for colourful console log
+> This a simple react library to make console log 
 
-[![NPM](https://img.shields.io/npm/v/ark-react-log.svg)](https://www.npmjs.com/package/ark-react-log) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Generic badge](https://img.shields.io/badge/npm-ark--react--log-green)](https://www.npmjs.com/package/ark-react-log/)
 
 ## Install
 
 ```bash
-npm install --save ark-react-log
+npm install --save ark-react-config
 ```
+
+[Documentation](https://immi5556.github.io/ark-react-log/ "Docu Link")
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'ark-react-log'
-import 'ark-react-log/dist/index.css'
+import { ArkLog } from 'ark-react-log'
 
 class Example extends Component {
+  logInfo(){
+    ArkLog('Lord Jesus', 'Almost SAVED is Totally Lost').error();
+  }
   render() {
-    return <MyComponent />
+    return <div> Component content here </div>
   }
 }
 ```
