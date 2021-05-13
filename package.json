@@ -1,10 +1,20 @@
 {
   "name": "ark-react-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple react library for colourful console log",
   "author": "https://github.com/immi5556",
   "license": "MIT",
   "repository": "https://github.com/immi5556/ark-react-log",
+  "keywords": [
+    "react",
+    "console",
+    "log",
+    "colorful",
+    "log",
+    "Immanuel",
+    "developer",
+    "debug"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

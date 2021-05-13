@@ -1,4 +1,4 @@
-# ark-react-config
+# ark-react-log
 
 > This a simple react library to make console log 
 
@@ -7,10 +7,15 @@
 ## Install
 
 ```bash
-npm install --save ark-react-config
+npm install --save ark-react-log
 ```
 
 [Documentation](https://immi5556.github.io/ark-react-log/ "Docu Link")
+
+Browser usage:
+```bash
+<script src="https://cdn.jsdelivr.net/npm/ark-js-log@latest/ark-log.js"></script>
+```
 
 ## Usage
 

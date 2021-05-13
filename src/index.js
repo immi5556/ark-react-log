@@ -26,9 +26,21 @@ export const ArkLog = (tag, msg) => {
       String(milliseconds).padStart(3, '0')
     );
   }
+  const stripCircularVal = vv => {
+    var cache = [];
+    return (key, value) => {
+      if (typeof value === 'object' && value !== null) {
+        if (cache.indexOf(value) !== -1) {
+          return;
+        }
+        cache.push(value);
+      }
+      return value;
+    };
+  }
   const getExtract = (vv) => {
     if (typeof vv == 'object')
-      return vv ? JSON.stringify(vv) : vv;
+      return vv ? JSON.stringify(vv, stripCircularVal(), 4) : vv;
     return vv;
   }
   const taglen = 10;

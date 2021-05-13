@@ -1,6 +1,6 @@
 {
   "name": "ark-js-log",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "simple javascript log with colorful enhancement",
   "main": "ark-log.js",
   "scripts": {
@@ -8,13 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/immi5556/ark-react-log.git"
+    "url": "git+https://github.com/immi5556/ark-react-log/tree/master/browser"
   },
   "keywords": [
     "console",
     "log",
     "colorful",
     "log",
+    "Immanuel",
     "developer",
     "debug"
   ],

@@ -1,5 +1,20 @@
+/**
+ * ark-js-log
+ * cdn: https://cdn.jsdelivr.net/npm/ark-js-log@latest/ark-log.js
+ * git repo: https://github.com/immi5556/ark-react-log/tree/master/browser
+ *
+ * Description: Simple javascript library to display the console log in distinct colors
+ * with appropriate data and time stamp
+ * 
+ * @version 1.0.1
+ * @date    2021-05-10
+ * 
+ * @copyright (c) 2015-2022 Immanuel R, https://www.immanuel.co
+ * @author: Immanuel
+ */
+
 var arkw = window
-export const ArkLog = (tag, msg) => {
+var ArkLog = (tag, msg) => {
   var getDate = () => {
     const value = new Date();
     const day = value.getDate();
@@ -26,9 +41,21 @@ export const ArkLog = (tag, msg) => {
       String(milliseconds).padStart(3, '0')
     );
   }
+  const stripCircularVal = vv => {
+    var cache = [];
+    return (key, value) => {
+      if (typeof value === 'object' && value !== null) {
+        if (cache.indexOf(value) !== -1) {
+          return;
+        }
+        cache.push(value);
+      }
+      return value;
+    };
+  }
   const getExtract = (vv) => {
     if (typeof vv == 'object')
-      return vv ? JSON.stringify(vv) : vv;
+      return vv ? JSON.stringify(vv, stripCircularVal, 4) : vv;
     return vv;
   }
   const taglen = 10;
